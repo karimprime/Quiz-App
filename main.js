@@ -80,35 +80,120 @@ function setupQuizPage() {
     let draftQuestions = [];
 
     // Sample questions for each topic and difficulty level
-    const questions = {
+     const questions = {
         chemistry: {
             easy: [
                 { question: "What is the chemical formula for water?", answers: ["H2O", "O2", "H2"], correct: 0 },
                 { question: "What is the pH level of pure water?", answers: ["7", "14", "0"], correct: 0 },
+                { question: "What gas do plants absorb?", answers: ["Oxygen", "Carbon Dioxide", "Nitrogen"], correct: 1 },
+                { question: "What is the chemical symbol for gold?", answers: ["Au", "Ag", "Pb"], correct: 0 },
+                { question: "What is the most abundant gas in the Earth's atmosphere?", answers: ["Oxygen", "Carbon Dioxide", "Nitrogen"], correct: 2 },
+                { question: "What is the chemical formula for table salt?", answers: ["NaCl", "KCl", "CaCl2"], correct: 0 },
+                { question: "Which element is a noble gas?", answers: ["Helium", "Hydrogen", "Carbon"], correct: 0 },
+                { question: "What is the boiling point of water in Celsius?", answers: ["0", "100", "212"], correct: 1 },
+                { question: "What is the primary component of natural gas?", answers: ["Ethane", "Propane", "Methane"], correct: 2 },
+                { question: "What is the main ingredient in vinegar?", answers: ["Acetic Acid", "Citric Acid", "Lactic Acid"], correct: 0 },
+                { question: "What is the most reactive group of elements?", answers: ["Noble gases", "Alkali metals", "Halogens"], correct: 1 },
+                { question: "Which particle has a negative charge?", answers: ["Proton", "Neutron", "Electron"], correct: 2 },
+                { question: "What is the atomic number of hydrogen?", answers: ["1", "2", "3"], correct: 0 },
+                { question: "Which acid is found in the stomach?", answers: ["Sulfuric Acid", "Hydrochloric Acid", "Nitric Acid"], correct: 1 },
+                { question: "What do you call a substance that speeds up a chemical reaction?", answers: ["Catalyst", "Reagent", "Inhibitor"], correct: 0 },
+                { question: "What is the main element in organic compounds?", answers: ["Carbon", "Oxygen", "Nitrogen"], correct: 0 },
+                { question: "What is the main gas released by burning fossil fuels?", answers: ["Oxygen", "Carbon Dioxide", "Nitrogen"], correct: 1 },
+                { question: "What is the chemical formula for glucose?", answers: ["C6H12O6", "C12H22O11", "C6H6"], correct: 0 },
+                { question: "What is the hardest natural substance on Earth?", answers: ["Gold", "Diamond", "Iron"], correct: 1 },
+                { question: "Which part of the atom contains protons and neutrons?", answers: ["Electron Cloud", "Nucleus", "Orbital"], correct: 1 },
+                { question: "What is a common use for sulfuric acid?", answers: ["Battery Acid", "Food Preservative", "Fertilizer"], correct: 0 }
             ],
             medium: [
                 { question: "What is the atomic number of oxygen?", answers: ["8", "16", "2"], correct: 0 },
                 { question: "Which element is represented by the symbol 'Fe'?", answers: ["Iron", "Gold", "Lead"], correct: 0 },
-            ],
-            hard: [
                 { question: "What is the molar mass of carbon dioxide (CO2)?", answers: ["44 g/mol", "28 g/mol", "32 g/mol"], correct: 0 },
-                { question: "Which law states that mass cannot be created or destroyed?", answers: ["Law of Conservation of Mass ", "Ideal Gas Law", "Avogadro's Law"], correct: 0 },
-            ],
+                { question: "Which law states that mass cannot be created or destroyed?", answers: ["Law of Conservation of Mass", "Ideal Gas Law", "Avogadro's Law"], correct: 0 },
+                { question: "What is the primary oxidation state of phosphorus in phosphoric acid?", answers: ["+3", "+5", "+1"], correct: 1 },
+                { question: "Which gas is used in balloon filling?", answers: ["Hydrogen", "Helium", "Nitrogen"], correct: 1 },
+                { question: "What is the main component of air?", answers: ["Oxygen", "Nitrogen", "Carbon Dioxide"], correct: 1 },
+                { question: "What is the process of a liquid turning into gas?", answers: ["Condensation", "Evaporation", "Sublimation"], correct: 1 },
+                { question: "What is the chemical symbol for sodium?", answers: ["Na", "S", "K"], correct: 0 },
+
+                { question: "What is the main use of hydrochloric acid?", answers: ["Cleaning agent", "Food additive", "Battery acid"], correct: 0 },
+                { question: "What is the primary type of reaction in cellular respiration?", answers: ["Exothermic", "Endothermic", "Redox"], correct: 2 },
+                { question: "What is the term for the amount of solute that can be dissolved in a solvent at a given temperature?", answers: ["Solubility", "Concentration", "Molarity"], correct: 0 },
+                { question: "What is the process of converting a solid directly to gas called?", answers: ["Sublimation", "Deposition", "Condensation"], correct: 0 },
+                { question: "What is the term for a solution that can resist changes in pH?", answers: ["Buffer", "Acid", "Base"], correct: 0 },
+                { question: "What is the primary function of enzymes in biological reactions?", answers: ["Catalysts", "Inhibitors", "Reactants"], correct: 0 }
+            ]
         },
         physics: {
             easy: [
                 { question: "What is the formula for force?", answers: ["F=ma", "F=mv", "F=ma^2"], correct: 0 },
                 { question: "What is the speed of light?", answers: ["300,000 km/s", "150,000 km/s", "1,000 km/s"], correct: 0 },
+                { question: "What is the unit of force?", answers: ["Newton", "Joule", "Watt"], correct: 0 },
+                { question: "What is the law of universal gravitation?", answers: ["F = G(m1*m2)/r^2", "F = ma", "E = mc^2"], correct: 0 },
+                { question: "What is the formula for kinetic energy?", answers: ["KE = 1/2mv^2", "KE = mv^2", "KE = mgh"], correct: 0 },
+                { question: "What is the unit of power?", answers: ["Watt", "Joule", "Newton"], correct: 0 },
+                { question: "What is the acceleration due to gravity?", answers: ["9.8 m/s^2", "8.3 m/s^2", "10 m/s^2"], correct: 0 },
+                { question: "What is the principle of conservation of energy?", answers: ["Energy cannot be created or destroyed", "Energy can be created", "Energy is equal to mass"], correct: 0 },
+                { question: "What is the unit of work?", answers: ["Joule", "Newton", "Watt"], correct: 0 },
+                { question: "What is the measure of an object's resistance to changes in its motion?", answers: ["Mass", "Weight", "Force"], correct: 0 },
+                { question: "What type of energy is associated with motion?", answers: ["Kinetic Energy", "Potential Energy", "Mechanical Energy"], correct: 0 },
+                { question: "What is the term for the bending of light as it passes through different mediums?", answers: ["Refraction", "Reflection", "Diffraction"], correct: 0 },
+                { question: "What is the term for the energy stored in an object due to its position?", answers: ["Potential Energy", "Kinetic Energy", "Mechanical Energy"], correct: 0 },
+                { question: "What is the process of energy transfer through direct contact called?", answers: ["Conduction", "Convection", "Radiation"], correct: 0 },
+                { question: "What is the formula for density?", answers: ["Density = Mass/Volume", "Density = Volume/Mass", "Density = Mass x Volume"], correct: 0 },
+                { question: "What is the basic unit of charge?", answers: ["Coulomb", "Ampere", "Volt"], correct: 0 },
+                { question: "What is the unit of frequency?", answers: ["Hertz", "Joule", "Watt"], correct: 0 },
+                { question: "What is the law of inertia?", answers: ["An object in motion stays in motion", "For every action, there is an equal reaction", "Energy cannot be created or destroyed"], correct: 0 },
+                { question: "What is the term for the force exerted by a surface that supports the weight of an object?", answers: ["Normal Force", "Friction", "Tension"], correct: 0 },
+                { question: "What is the unit of temperature in the SI system?", answers: ["Celsius", "Fahrenheit", "Kelvin"], correct: 2 },
+                { question: "What is the primary force that causes objects to fall toward the Earth?", answers: ["Gravity", "Friction", "Tension"], correct: 0 }
             ],
             medium: [
+
                 { question: "What is Newton's second law?", answers: ["F=ma", "E=mc^2", "p=mv"], correct: 0 },
                 { question: "What is the unit of work?", answers: ["Joule", "Newton", "Watt"], correct: 0 },
+                { question: "What is the formula for potential energy?", answers: ["PE = mgh", "PE = 1/2mv^2", "PE = Fd"], correct: 0 },
+                { question: "What is the principle of conservation of momentum?", answers: ["Momentum cannot be created or destroyed", "Momentum can be created", "Momentum is the same as energy"], correct: 0 },
+                { question: "What is the formula for gravitational potential energy?", answers: ["PE = mgh", "PE = 1/2mv^2", "PE = Fd"], correct: 0 },
+                { question: "What is the term for the distance traveled per unit of time?", answers: ["Speed", "Velocity", "Acceleration"], correct: 0 },
+                { question: "What is the unit of pressure?", answers: ["Pascal", "Bar", "Newton"], correct: 0 },
+                { question: "What is the term for the amount of matter in an object?", answers: ["Mass", "Weight", "Volume"], correct: 0 },
+                { question: "What is the force that opposes motion between two surfaces in contact?", answers: ["Friction", "Gravity", "Tension"], correct: 0 },
+                { question: "What is the formula for momentum?", answers: ["p = mv", "p = ma", "p = Fd"], correct: 0 },
+                { question: "What is the SI unit for electric current?", answers: ["Ampere", "Coulomb", "Volt"], correct: 0 },
+                { question: "What is the principle of buoyancy?", answers: ["An object will float if it displaces its weight of fluid", "An object will sink if it is denser than fluid", "Both of the above"], correct: 0 },
+                { question: "What is the law of reflection?", answers: ["Angle of incidence equals angle of reflection", "Light travels in straight lines", "Both of the above"], correct: 0 },
+                { question: "What is the formula for the period of a pendulum?", answers: ["T = 2π√(L/g)", "T = 2πf", "T = g/L"], correct: 0 },
+                { question: "What is the term for the rate of change of velocity?", answers: ["Acceleration", "Velocity", "Speed"], correct: 0 },
+                { question: "What is the formula for wave speed?", answers: ["v = fλ", "v = A/T", "v = m/a"], correct: 0 },
+                { question: "What is the term for the bending of waves around obstacles?", answers: ["Diffraction", "Interference", "Refraction"], correct: 0 },
+                { question: "What is the unit of energy?", answers: ["Joule", "Calorie", "Watt"], correct: 0 },
+                { question: "What is the unit of torque?", answers: ["Newton-meter", "Joule", "Watt"], correct: 0 },
+                { question: "What is the term for the total energy of an object due to its motion and position?", answers: ["Mechanical Energy", "Kinetic Energy", "Potential Energy"], correct: 0 }
             ],
             hard: [
                 { question: "What is the principle of conservation of energy?", answers: ["Energy cannot be created or destroyed", "Energy can be created", "Energy is equal to mass"], correct: 0 },
                 { question: "What is the unit of electrical resistance?", answers: ["Ohm", "Volt", "Ampere"], correct: 0 },
+                { question: "What is the Doppler effect?", answers: ["Change in frequency due to motion", "Change in amplitude due to distance", "Change in energy due to mass"], correct: 0 },
+                { question: "What is the term for the energy of a body due to its motion?", answers: ["Kinetic Energy", "Potential Energy", "Mechanical Energy"], correct: 0 },
+                { question: "What is the formula for gravitational force?", answers: ["F = G(m1*m2)/r^2", "F = ma", "F = mgh"], correct: 0 },
+                { question: "What is the term for the study of the relationship between heat and other forms of energy?", answers: ["Thermodynamics", "Kinetics", "Dynamics"], correct: 0 },
+                { question: "What is the name of the effect that explains how light bends when it passes through a lens?", answers: ["Refraction", "Reflection", "Diffraction"], correct: 0 },
+
+                { question: "What is the term for the ratio of the output force to the input force in a machine?", answers: ["Mechanical Advantage", "Efficiency", "Work"], correct: 0 },
+                { question: "What is the law of conservation of charge?", answers: ["Charge cannot be created or destroyed", "Charge can be created", "Charge is the same as mass"], correct: 0 },
+                { question: "What is the term for the motion of objects in circular paths?", answers: ["Circular Motion", "Rotational Motion", "Linear Motion"], correct: 0 },
+                { question: "What is the study of forces and their effects on motion?", answers: ["Dynamics", "Kinematics", "Statics"], correct: 0 },
+                { question: "What is the principle of superposition in wave theory?", answers: ["The total displacement is the sum of individual displacements", "Waves cannot interfere with each other", "Waves only travel in one direction"], correct: 0 },
+                { question: "What is the unit of angular momentum?", answers: ["kg*m^2/s", "kg*m/s", "kg*m/s^2"], correct: 0 },
+                { question: "What is the term for the motion of an object in a straight line?", answers: ["Linear Motion", "Rotational Motion", "Curvilinear Motion"], correct: 0 },
+                { question: "What is the law of thermodynamics that states energy cannot be created or destroyed?", answers: ["First Law", "Second Law", "Third Law"], correct: 0 },
+                { question: "What is the principle behind the operation of a hydraulic lift?", answers: ["Pascal's Principle", "Archimedes' Principle", "Bernoulli's Principle"], correct: 0 },
+                { question: "What is the term for the maximum displacement of a wave from its rest position?", answers: ["Amplitude", "Wavelength", "Frequency"], correct: 0 },
+                { question: "What is the formula for calculating pressure?", answers: ["Pressure = Force/Area", "Pressure = Area/Force", "Pressure = Force*Area"], correct: 0 },
+                { question: "What is the term for the transfer of heat without direct contact?", answers: ["Radiation", "Conduction", "Convection"], correct: 0 }
             ],
-        },
+        }
     };
 
     // Topic selection
