@@ -41,7 +41,7 @@ function handleRegistration(username, password) {
         storedUsers[username] = password;
         localStorage.setItem('users', JSON.stringify(storedUsers));
         alert("Registration successful! You can now log in.");
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }
 }
 
