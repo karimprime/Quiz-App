@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" id="quiz-page"> <!-- matches 'quiz-page' -->
+        <div class="card">
+            <div id="topics"> <!-- matches 'topics' -->
+                <button class="topic-btn" data-topic="chemistry">Chemistry</button>
+                <button class="topic-btn" data-topic="physics">Physics</button>
+            </div>
+
+            <div id="difficulty-levels" class="hidden"> <!-- matches 'difficulty-levels' -->
+                <button class="difficulty-btn" data-level="easy">Easy</button>
+                <button class="difficulty-btn" data-level="medium">Medium</button>
+                <button class="difficulty-btn" data-level="hard">Hard</button>
+            </div>
+
+            <div id="question-page" class="hidden"> <!-- matches 'question-page' -->
+                <p id="timer"></p> <!-- matches 'timer' -->
+                <p id="question"></p> <!-- matches 'question' -->
+                <div id="answers"></div> <!-- matches 'answers' -->
+
+                <button class="skip-btn" id="skip-btn">Skip Question</button> <!-- Add skip button -->
+                <button class="show-draft-btn" style="display: none;">Show Draft Questions</button>
+            </div>
+
+            <div class="draft-container" style="display: none;">
+                <h3>Drafted Questions:</h3>
+                <ul class="draft-options"></ul>
+            </div>
+
+            <div id="end-options" class="hidden"> <!-- matches 'end-options' -->
+                <div id="results-container">
+                    <h2>Your Score: <span id="final-score">0</span></h2> <!-- matches 'final-score' -->
+                    <div class="evaluation">
+                        <strong>Evaluation:</strong> <span id="evaluation-text">Excellent</span>
+                    </div>
+
+                    <div class="subject-scores">
+                        <h3>Total Chemistry Score: <span id="chemistry-score">0</span></h3>
+                        <!-- matches 'chemistry-score' -->
+                        <div class="difficulty-levels">
+                            <p><strong>Easy:</strong> <span id="chemistry-easy">0</span></p>
+                            <!-- matches 'chemistry-easy' -->
+                            <p><strong>Medium:</strong> <span id="chemistry-medium">0</span></p>
+                            <!-- matches 'chemistry-medium' -->
+                            <p><strong>Hard:</strong> <span id="chemistry-hard">0</span></p>
+                            <!-- matches 'chemistry-hard' -->
+                        </div>
+                    </div>
+
+                    <div class="subject-scores">
+                        <h3>Total Physics Score: <span id="physics-score">0</span></h3> <!-- matches 'physics-score' -->
+                        <div class="difficulty-levels">
+                            <p><strong>Easy:</strong> <span id="physics-easy">0</span></p>
+                            <!-- matches 'physics-easy' -->
+                            <p><strong>Medium:</strong> <span id="physics-medium">0</span></p>
+                            <!-- matches 'physics-medium' -->
+                            <p><strong>Hard:</strong> <span id="physics-hard">0</span></p>
+                            <!-- matches 'physics-hard' -->
+                        </div>
+                    </div>
+                </div>
+                <button id="back-to-topics">Back to Topics</button> <!-- matches 'back-to-topics' -->
+            </div>
+
+            <button id="logout-btn" onclick="window.location.href='login.html'"><span
+                    class="material-symbols-outlined">logout</span> Logout</button>
+        </div>
+        <div id="message-container" style="display: none; color: red;"></div>
+    </div>
+    <script src="main.js" defer></script>
+</body>
+
+</html>

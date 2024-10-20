@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+    margin: 0;
+    padding: 20px;
+    color: #444; /* Improved text color for readability */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full height for centering */
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    max-width: 800px;
+    margin: 20px auto; /* Center with margin */
+    padding: 30px; /* Spacious padding */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.card:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2); /* Enhanced lift effect on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; /* Added margin for spacing */
+    font-size: 28px; /* Increased heading size */
+    font-weight: 500; /* Medium weight for headings */
+}
+
+input[type="text"],
+input[type="password"],
+button,
+.answer-btn {
+    width: 100%;
+    padding: 12px; /* Increased padding for touch targets */
+    margin: 12px 0; /* Consistent margins */
+    border: 1px solid #ccc; /* Softer border color */
+    border-radius: 6px; /* Softer corners */
+    font-size: 16px; /* Standard font size */
+    font-family: inherit; /* Match input font to body */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    transition: border 0.3s ease; /* Transition for focus effect */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove outline */
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: #28a745; /* Main button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold; /* Bold font for buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.answer-btn {
+    background-color: #007bff; /* Answer button color */
+}
+
+.answer-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.hidden {
+    display: none; /* Hide elements */
+}
+
+#timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    margin: 12px 0;
+    font-size: 18px; /* Increased font size */
+    color: #d9534f; /* Red color for timer */
+}
+
+#end-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style for the results container */
+#results-container {
+    background-color: #ffffff;
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    padding: 20px; /* Padding for inner spacing */
+    width: 600px; /* Max width for results section */
+    margin: 20px auto; /* Center results section */
+}
+
+/* Results heading */
+#results-container h2 {
+    color: #28a745; /* Green for score */
+    margin-bottom: 10px; /* Margin for spacing */
+}
+
+/* Evaluation text styling */
+.evaluation {
+    font-size: 20px;
+    color: #5cb85c; /* Slightly lighter green */
+    margin-bottom: 20px; /* Margin for spacing */
+    font-weight: 500; /* Medium weight for evaluation */
+}
+
+/* Subject scores */
+.subject-scores {
+    background: #f8f9fa; /* Light gray background */
+    border-radius: 8px; /* Softer corners */
+    padding: 15px; /* Padding for spacing */
+    margin: 10px 0; /* Vertical margin for separation */
+}
+
+.subject-scores h3 {
+    color: #007bff; /* Blue for subject titles */
+    margin: 10px 0; /* Margin for spacing */
+    font-weight: 500; /* Medium weight for headings */
+}
+
+.difficulty-levels p {
+    margin: 5px 0; /* Vertical margin for spacing */
+    font-size: 16px;
+    color: #333; /* Standard text color */
+}
+
+.difficulty-levels strong {
+    color: #28a745; /* Green for difficulty labels */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+
+    .card {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+    
+    h2 {
+        font-size: 24px; /* Reduced heading size */
+    }
+
+    input[type="text"],
+    input[type="password"],
+    button {
+        font-size: 14px; /* Slightly smaller font size */
+    }
+}
+
+/* Error messages */
+#error-message {
+    font-size: 14px; /* Standard font size */
+    margin-top: 10px; /* Top margin */
+    color: red; /* Red for error messages */
+    text-align: center; /* Centered text */
+}
+
+
+.draft-container {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.draft-options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.draft-options li {
+    padding: 5px;
+    background-color: #eaeaea;
+    border-bottom: 1px solid #d1d1d1;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+

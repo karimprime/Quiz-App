@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container" id="registration-form">
+        <div class="card">
+            <h2>Register</h2>
+            <form id="register-form">
+                <input type="text" id="new-username" placeholder="New Username" required>
+                <input type="password" id="new-password" placeholder="New Password" required>
+                <button type="submit">Register</button>
+                <p id="register-error-message"></p>
+            </form>
+            <button onclick="window.history.back()">Back to Login</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
